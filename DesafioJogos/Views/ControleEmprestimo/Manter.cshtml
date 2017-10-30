@@ -1,0 +1,57 @@
+﻿@using DesafioJogos.Models
+
+@model ControleEmprestimoViewModel
+
+@{
+    ViewBag.Title = "Cadastro de Empréstimos";
+    string confirmar = Model.Id > 0 ? Comuns.Mensagens.MC01 : string.Empty;
+}
+
+@section scripts{
+    @Scripts.Render("~/Scripts/Sistema/ControleEmprestimo/Manter.js")
+
+    <script type="text/javascript">
+        var confirmar = '@Html.Raw(confirmar)';
+    </script>
+}
+
+@section body {
+    <section>
+        <fieldset>
+            <legend>@ViewBag.Title</legend>
+        </fieldset>
+        <form class="form-horizontal" id="frmManter">
+            @Html.HiddenFor(x => x.Id)
+
+            <div class="form-group">
+                <div>
+                    <label id="lblAmigo" class="col-sm-2 control-label" for="ddlAmigo">* Amigo:</label>
+                    <div class="col-sm-2">
+                        @Html.DropDownListFor(x => x.Amigo.Id, (List<SelectListItem>)ViewBag.Amigos, new { @id = "ddlAmigo", @class = "form-control required" })
+                    </div>
+                </div>
+                <div>
+                    <label id="lblJogo" class="col-sm-2 control-label" for="ddlJogo">* Jogo:</label>
+                    <div class="col-sm-4">
+                        @Html.DropDownListFor(x => x.Jogo.Id, (List<SelectListItem>)ViewBag.Jogos, new { @id = "ddlJogo", @class = "form-control required" })
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-11">
+                    <div style="text-align:right">
+                        <button id="btnSalvar" name="btnSalvar" type="submit" title="Salvar" class="btn btn-primary btn-default">Salvar</button>
+                        @if (Model.Id > 0)
+                        {
+                            <a id="btnCancelar" name="btnCancelar" href="~/ControleEmprestimo/Index" title="Cancelar" class="btn btn-default">Cancelar</a>
+                        }
+                        else
+                        {
+                            <a id="btnVoltar" name="btnVoltar" href="~/ControleEmprestimo/Index" title="btnVoltar" class="btn btn-default">Voltar</a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+}

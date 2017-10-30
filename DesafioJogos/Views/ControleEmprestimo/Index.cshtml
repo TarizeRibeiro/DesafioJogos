@@ -1,0 +1,62 @@
+﻿@using DesafioJogos.Models
+
+@model ControleEmprestimoViewModel
+
+@{
+    ViewBag.Title = "Pesquisa de Empréstimos";
+}
+
+@section scripts{
+    @Scripts.Render("~/Scripts/Sistema/ControleEmprestimo/Index.js")
+
+    <script type="text/javascript">
+        var MC02 = '@Html.Raw(Comuns.Mensagens.MC02)';
+    </script>
+}
+
+@section body {
+    <section>
+        <fieldset>
+            <legend>@ViewBag.Title</legend>
+        </fieldset>
+        <form class="form-horizontal" id="frmConsultar">
+            <div class="form-group">
+                <div>
+                    <label id="lblAmigo" class="col-sm-2 control-label" for="ddlAmigo">Amigo:</label>
+                    <div class="col-sm-3">
+                        @Html.DropDownListFor(x => x.Amigo.Id, (List<SelectListItem>)ViewBag.Amigos, new { @id = "ddlAmigo", @class = "form-control" })
+                    </div>
+                </div>
+                <div>
+                    <label id="lblJogo" class="col-sm-1 control-label" for="ddlJogo">Jogo:</label>
+                    <div class="col-sm-2">
+                        @Html.DropDownListFor(x => x.Jogo.Id, (List<SelectListItem>)ViewBag.Jogos, new { @id = "ddlJogo", @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-11">
+                    <div style="text-align:right">
+                        <button id="btnPesquisar" name="btnPesquisar" type="submit" title="Pesquisar" class="btn btn-primary btn-default">Pesquisar</button>
+                        <a id="btnIncluir" name="btnIncluir" href="~/ControleEmprestimo/Manter" title="Incluir" class="btn btn-default">Incluir</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+    <br />
+    <br />
+    <div class="table-group">
+        <content> RESULTADO PESQUISA </content>
+        <table class="table table-striped" id="tblResultado"></table>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-11">
+            <div style="text-align:right">
+                <a id="btnVoltar" name="btnVoltar" href="~/Home/Index" title="btnVoltar" class="btn btn-default">Voltar</a>
+            </div>
+        </div>
+    </div>
+}

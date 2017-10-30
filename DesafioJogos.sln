@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioJogos", "DesafioJogos\DesafioJogos.csproj", "{BA83E4DC-D82B-49FD-AC86-407BE4864DFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocios", "Negocios\Negocios.csproj", "{9F58CDA0-C628-4D75-9052-06D2E83CE621}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositorios", "Servicos\Repositorios.csproj", "{716D6D31-3B59-4034-96CC-3D4AD4E1962F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{862DF26F-2043-40F1-B170-5E1E328A67D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comuns", "Comuns\Comuns.csproj", "{9B7B2210-6738-4C4C-91E5-82E191B24BA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bootstrapper", "Bootstrapper\Bootstrapper.csproj", "{9B0BCFDB-88F8-47D9-B52F-777303CDCABE}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tarize.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Comuns\\Comuns.csproj
+		SccProjectName1 = Comuns
+		SccLocalPath1 = Comuns
+		SccProjectUniqueName2 = Entidades\\Entidades.csproj
+		SccProjectName2 = Entidades
+		SccLocalPath2 = Entidades
+		SccProjectUniqueName3 = Negocios\\Negocios.csproj
+		SccProjectName3 = Negocios
+		SccLocalPath3 = Negocios
+		SccProjectUniqueName4 = DesafioJogos\\DesafioJogos.csproj
+		SccProjectName4 = DesafioJogos
+		SccLocalPath4 = DesafioJogos
+		SccProjectUniqueName5 = Bootstrapper\\Bootstrapper.csproj
+		SccProjectName5 = Bootstrapper
+		SccLocalPath5 = Bootstrapper
+		SccProjectUniqueName6 = Servicos\\Repositorios.csproj
+		SccProjectName6 = Servicos
+		SccLocalPath6 = Servicos
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA83E4DC-D82B-49FD-AC86-407BE4864DFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA83E4DC-D82B-49FD-AC86-407BE4864DFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA83E4DC-D82B-49FD-AC86-407BE4864DFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA83E4DC-D82B-49FD-AC86-407BE4864DFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F58CDA0-C628-4D75-9052-06D2E83CE621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F58CDA0-C628-4D75-9052-06D2E83CE621}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F58CDA0-C628-4D75-9052-06D2E83CE621}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F58CDA0-C628-4D75-9052-06D2E83CE621}.Release|Any CPU.Build.0 = Release|Any CPU
+		{716D6D31-3B59-4034-96CC-3D4AD4E1962F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{716D6D31-3B59-4034-96CC-3D4AD4E1962F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{716D6D31-3B59-4034-96CC-3D4AD4E1962F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{716D6D31-3B59-4034-96CC-3D4AD4E1962F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{862DF26F-2043-40F1-B170-5E1E328A67D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{862DF26F-2043-40F1-B170-5E1E328A67D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{862DF26F-2043-40F1-B170-5E1E328A67D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{862DF26F-2043-40F1-B170-5E1E328A67D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B7B2210-6738-4C4C-91E5-82E191B24BA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B7B2210-6738-4C4C-91E5-82E191B24BA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B7B2210-6738-4C4C-91E5-82E191B24BA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B7B2210-6738-4C4C-91E5-82E191B24BA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B0BCFDB-88F8-47D9-B52F-777303CDCABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B0BCFDB-88F8-47D9-B52F-777303CDCABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B0BCFDB-88F8-47D9-B52F-777303CDCABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B0BCFDB-88F8-47D9-B52F-777303CDCABE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

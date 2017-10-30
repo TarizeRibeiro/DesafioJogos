@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "HOME";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts{
+    <script>
+        $('.desabilitarMenu').each(function () {
+            $(this).show()
+        });
+    </script>
+}
+
+@section body {
+    <section>
+        <fieldset>
+            <legend> @ViewBag.Title</legend>
+
+            <form class="form-horizontal">
+                <h1>Bem Vindo!</h1>
+            </form>
+        </fieldset>
+    </section>
+}
+

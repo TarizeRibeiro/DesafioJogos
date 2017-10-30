@@ -1,0 +1,79 @@
+﻿@using DesafioJogos.Models
+
+@model AmigoViewModel
+
+
+@{
+    ViewBag.Title = "Inclusão de Amigo";
+    string confirmar = Model.Id > 0 ? Comuns.Mensagens.MC01 : string.Empty;
+}
+
+@section scripts{
+    @Scripts.Render("~/Scripts/Sistema/Amigo/Manter.js")
+
+    <script type="text/javascript">
+        var confirmar = '@Html.Raw(confirmar)';
+    </script>
+}
+
+@section body {
+    <section>
+        <fieldset>
+            <legend>@ViewBag.Title</legend>
+        </fieldset>
+        <form class="form-horizontal" id="frmManter">
+            @Html.HiddenFor(x => x.Id)
+            <div class="form-group">
+                <div>
+                    <label id="lblNome" class="col-sm-2 control-label" for="txtNome">* Nome:</label>
+                    <div class="col-sm-9">
+                        @Html.TextBoxFor(x => x.Nome, new { @id = "txtNome", @maxlength = "100", @class = "form-control required" })
+                    </div>
+                </div>
+            </div>
+
+
+            <br />
+            <br />
+
+            <div class="form-group">
+                <div>
+                    <label id="lblEmail" class="col-sm-2 control-label" for="txtEmail">E-mail:</label>
+                    <div class="col-sm-3">
+                        @Html.TextBoxFor(x => x.Email, new { @id = "txtEmail", @maxlength = "30", @class = "form-control" })
+                    </div>
+                </div>
+                <div>
+                    <label id="lblTelefone" class="col-sm-1 control-label" for="txtTelefone">* Telefone:</label>
+                    <div class="col-sm-2">
+                        @Html.TextBoxFor(x => x.Telefone, new { @id = "txtTelefone", @maxlength = "14", @class = "form-control required" })
+                    </div>
+                </div>
+                <div>
+                    <label id="lblCelular" class="col-sm-1 control-label" for="txtCelular">Celular:</label>
+                    <div class="col-sm-2">
+                        @Html.TextBoxFor(x => x.Celular, new { @id = "txtCelular", @maxlength = "14", @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <div class="col-sm-11">
+                    <div style="text-align:right">
+                        <button id="btnSalvar" name="btnSalvar" type="submit" title="Salvar" class="btn btn-primary btn-default">Salvar</button>
+                        @if (Model.Id > 0)
+                        {
+                            <a id="btnCancelar" name="btnCancelar" href="~/Amigo/Index" title="Cancelar" class="btn btn-default">Cancelar</a>
+                        }
+                        else
+                        {
+                            <a id="btnVoltar" name="btnVoltar" href="~/Amigo/Index" title="Voltar" class="btn btn-default">Voltar</a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+}
